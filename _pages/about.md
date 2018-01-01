@@ -4,12 +4,7 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+[Ruby Tahboub][ruby-tahboub] is a PhD candidate at the Department of Computer Science at Purdue University. I conduct research in the broad area of database systems and applications, query compilation, scientific data management, spatial data management and Geographic Information Systems (GIS).
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
 
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+[ruby-tahboub]: https://www.cs.purdue.edu/homes/rtahboub/index.htm
