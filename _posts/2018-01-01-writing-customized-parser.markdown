@@ -35,7 +35,7 @@ Starting with a blank `Scala` project, I copied Spark SQL's grammar file [SqlBas
 
 # The AstBuilder
 
-The [AstBuilder][AstBuilder] in Spark SQL, processes the ANTLR ParseTree to obtain a Logical Plan. I copied this file into my project and renamed it as [MyAstBuilder][MyAstBuilder]. I only needed to update [withJoinRelations][withJoinRelations] method to handle the KNN join type and implement [visitSpatialpredicated][visitSpatialpredicated] for the [spatialpredicated][spatialpredicated] rule I added to the grammar file. Furthermore, I defined an operator named [SpatialJoin][SpatialJoin] and a dummy prdict to model [PredKnn][predknn].
+The [AstBuilder][AstBuilder] in Spark SQL, processes the ANTLR ParseTree to obtain a Logical Plan. I copied this file into my project and renamed it as [MyAstBuilder][MyAstBuilder]. I only needed to update [withJoinRelations][withJoinRelations] method to handle the KNN join type and implement [visitSpatialpredicated][visitSpatialpredicated] for the [spatialpredicated][spatialpredicated] rule I added to the grammar file. Furthermore, I defined an operator named [SpatialJoin][SpatialJoin] and a dummy prdicate to model [PredKnn][predknn].
 
 # A Small Test
 Finally, inside the main, I print the optimized plan for the KNN join query.
