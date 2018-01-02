@@ -7,7 +7,7 @@ categories: jekyll update
 
 Recently, I've been working on a stand-alone Spark SQL related project where I needed to support Spatial queries. Luckily, Spark 2.2 added extension points that allow injecting a customized parser, analyzer or optimizer into Spark session. In this blog post, I will walk through adding the following `KNN` join query (you can access the full code [HERE][code])
 {% highlight sql %}
-select * from table1 knn join table2 using POINT (x2, y2) knnPred (POINT (x1, y1), 5)
+select * from table1 knn join table2 using POINT(x2, y2) knnPred(POINT(x1, y1), 5)
 {% endhighlight %}
 
 First, let's take a look at how the extension looks like (you may also check the examples in [SparkSessionExtensionSuite][SparkSessionExtensionSuite]):
@@ -41,7 +41,7 @@ The [AstBuilder][AstBuilder] in Spark SQL, processes the ANTLR ParseTree to obta
 Finally, inside the main, I print the optimized plan for the KNN join query.
 
 {% highlight scala %}
-System.out.println(spark.sql("select * from table1 knn join table2 using POINT (x2, y2) knnPred (POINT (x1, y1), 5)").queryExecution.optimizedPlan)
+System.out.println(spark.sql("select * from table1 knn join table2 using POINT(x2, y2) knnPred(POINT(x1, y1), 5)").queryExecution.optimizedPlan)
 
 SpatialJoin KNNJoin, PredKnn (POINT(x2#8,y2#9), POINT(x1#1,y1#2), 5)
 :- Relation[id1#0,x1#1,y1#2] csv
