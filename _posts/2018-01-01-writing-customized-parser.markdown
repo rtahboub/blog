@@ -52,8 +52,8 @@ SpatialJoin KNNJoin, PredKnn (POINT(x2#8,y2#9), POINT(x1#1,y1#2), 5)
 Here's a few lessons I learned while working on customizing Spark SQL parser:
 
 - The comment `#` in the grammar file means parser generates a visitor method for this rule.
-- It's very important to understand the 'Expression' class in Spark SQL as it used to model various types of nodes in the query plan.
-- Pay attention to Spark SQL package hierarchy. For instance, [MyAstBuilder][[MyAstBuilder]] should be defined under `org.apache.spark.sql.catalyst.parser` in order to avoid dependency errors.
+- It's very important to understand the `Expression` class in Spark SQL as it used to model various types of nodes in the query plan.
+- Pay attention to Spark SQL package hierarchy. For instance, [MyAstBuilder][[MyAstBuilder] should be defined under `org.apache.spark.sql.catalyst.parser` in order to avoid dependency errors.
 
 # Last Word
 This blog post is only about customizing Spark SQL's parser. Readers who are interested in implementing various spatial queries in Spark SQL may check [Simba][Simba]. For customizing Spark SQL optimizer you may check [Sunitha's blog][optimizer] post.
